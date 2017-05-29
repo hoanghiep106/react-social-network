@@ -1,0 +1,117 @@
+.navbar{
+  height: 78px;
+  padding: 10px 200px;
+  background-color: rgba(255, 255, 255, 1);
+  justify-content: center;
+}
+
+.logo{
+  margin-left: 110px;
+}
+
+.logo-name{
+  padding-left: 10px;
+}
+
+.logo-header{
+  margin-top: 10px;
+  padding-left: : 130px;
+}
+
+.btn-logout{
+  color: #3498db;
+  width: 70px;
+  padding: 4px 12px 5px;
+  margin-top: 4%;
+  margin-left: 10%;
+}
+
+.btn-logout:hover{
+  background-color: #3498db;
+  border-radius: 3px;
+  color: white;
+}
+
+.navbar-nav {
+    margin: 35px 0px;
+}
+
+.navbar-brand {
+    color: #3498db;
+}
+
+.btn-nav{
+  border: 1px #3498db;
+  color: #3498db;
+}
+
+.btn-nav:hover{
+  border-radius: 5px;
+  color: white;
+  background-color: #3498db;
+}
+
+.search-form{
+  margin-top: 4px;
+  display: inline-flex;
+}
+
+.button-search{
+  margin: 7px 15px 3px 0px;
+}
+
+@media only screen and (max-width : 1200px) {
+  .navbar{
+    padding-left: 100px;
+  }
+  .logo{
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width : 991px) {
+  .navbar{
+    padding: 70px 0px;
+  }
+  .logo{
+    margin-left: 30px;
+  }
+  .logo-header{
+    width: 43%;
+  }
+  .search-form{
+    width: 23%;
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .navbar{
+    padding: 20px 0px;
+  }
+  .logo{
+    margin-left: 0px;
+  }
+  .logo-header{
+    width: 66%;
+  }
+  .search-form{
+    display: none
+  }
+}
+
+@media only screen and (max-width : 500px) {
+  .navbar{
+    padding: 10px 0px;
+  }
+  .logo{
+    width: 30px;
+    height: 30px;
+    margin-left: 0px;
+  }
+  .logo-name{
+    height: 26px;
+  }
+  .logo-header{
+    width: 66%;
+  }
+}

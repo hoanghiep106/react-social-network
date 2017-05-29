@@ -1,0 +1,15 @@
+.register {
+  width: 400px;
+}
+
+.blue {
+  color: blue
+}
+
+.blue:hover {
+  font-size: 15px;
+}
+
+.red {
+  color: red;
+}

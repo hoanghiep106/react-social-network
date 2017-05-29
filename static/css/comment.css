@@ -1,0 +1,21 @@
+.comment-modal{
+  padding: 10px 25px;
+  background-color: #eee;
+  border-radius: 3px;
+  width: 500px;
+  margin: 0px;
+  z-index: 99999;
+}
+
+.comment{
+  z-index: 9999999;
+  top: 100;
+}
+
+.oneline{
+ display: -webkit-box;
+}
+
+.comment-content{
+ margin-top: .5px;
+}
