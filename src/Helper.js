@@ -1,19 +1,11 @@
-const LOCAL_URL = 'http://localhost:3000/';
-const BASE_URL = 'http://161.202.20.61:5000/';
+const BASE_URL = "https://vapeshop-api.herokuapp.com/"
 
-let Helper = {
-  authorizationUrl : BASE_URL + 'auth',
-  registerUrl: BASE_URL + 'reguser',
-  newfeedDataUrl: BASE_URL + 'postnewfeed?name=',
-  postDataUrl: BASE_URL + 'post',
-  likePostUrl: BASE_URL + 'likepost',
-  commentPostUrl: BASE_URL + 'postcmt',
-  commentDataUrl: BASE_URL + 'postcmt?postID=',
-  getUserUrl: BASE_URL + 'user?name=',
-  getUserPostUrl: BASE_URL + 'post?name=',
-  followUserUrl: BASE_URL + 'flwuser',
-  unfollowUserUrl: BASE_URL + 'unflwuser',
-  localURL: LOCAL_URL,
+const Helper = {
+  getAllProductsUrl: BASE_URL + "api/v1/products",
+  getProductByCategoryUrl: BASE_URL + 'api/v1/categories',
+  getProductByNameUrl: BASE_URL + 'api/v1/products',
+  addProductUrl: BASE_URL + 'api/v1/products',
+  getAllCategoriesUrl: BASE_URL + 'api/v1/categories'
 }
 
-export default Helper
+export default Helper;

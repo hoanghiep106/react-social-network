@@ -1,14 +1,8 @@
-# react-social-network
-A simple social network created with ReactJS that can divide user's posts into categories
+Shop template with React
 
-*. Setup packages for development
-
-npm install
-    
-*. Run project without changing anything
-
-npm start
-    
-*. Making changes and run
-
-npm run dev-all
+1. Install packages
+    npm i
+2. Start project without changing anything
+    npm start
+3. Apply some changes and start
+    npm run dev-all

@@ -1,0 +1,133 @@
+/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    padding-top: 0px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background-color: rgba(250, 250, 250);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: 60px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.caption h4 {
+    white-space: nowrap;
+}
+
+.thumbnail img {
+    width: 80%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 0px 10px;
+    color: #333;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.form-inline{
+  padding: 10px 0px 5px;
+}
+
+.navbar-inverse {
+    background-color: lightgrey;
+    border-color: white;
+    color: #777;
+}
+
+.container-home{
+  width: 90%;
+  margin: 30px 3rem 15px;
+}
+
+.product-name{
+  color: #444;
+}
+
+.product-photos{
+  padding: 17px 15px 15px;
+}
+
+.thumbnail .caption{
+  margin-top: -12px;
+  padding: 0px 0px 5px 20px;
+  color: #444;
+}
+
+.price-font-size{
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.name-font-size{
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.buy-button{
+  margin: -39px 17px;
+  background-color: #337ab7;
+  color: white;
+  border-radius: 3px;
+  padding: 3px 8px;
+}
+.type-name{
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.carousel {
+    position: relative;
+    padding: 20px;
+}
+
+.slick-next:before, .slick-prev:before {
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: #bbb;
+}
+
+
+@media only screen and (max-width : 767px) {
+  .container-home {
+      width: 90%;
+      margin: 20px 2rem 15px;
+  }
+  .carousel {
+      position: relative;
+      padding: 7px;
+  }
+}

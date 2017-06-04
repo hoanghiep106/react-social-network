@@ -1,10 +1,9 @@
-
 module.exports = {
-  entry: './src/Routes.js',
+  entry: './src/app.js',
 
   output: {
-    path: './static',
-    filename: 'app.bundle.js',
+    path: './public',
+    filename: 'bundle.js'
   },
 
   module: {

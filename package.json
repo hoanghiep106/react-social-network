@@ -1,41 +1,24 @@
 {
-  "name": "simple-social-network",
+  "name": "vapeshop-web",
   "version": "1.0.0",
-  "description": "Social Network",
-  "main": "server.js",
+  "description": "[Shop Homepage](http://startbootstrap.com/template-overviews/shop-homepage/) is a basic HTML online store homepage template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
     "compile": "webpack",
-    "dev-all": "npm run compile & npm start"
+    "dev-all": "npm run compile & npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git"
-  },
-  "keywords": "",
-  "author": "Hoang Hiep",
+  "keywords": [],
+  "author": "",
   "license": "UNLICENSED",
-  "homepage": "",
   "dependencies": {
-    "axios": "^0.16.1",
-    "babel-polyfill": "^6.13.0",
-    "create-react-class": "^15.5.3",
     "express": "^4.15.2",
-    "form-data": "^2.1.4",
-    "fs": "0.0.1-security",
-    "isomorphic-fetch": "^2.2.1",
-    "jsonfile": "^3.0.0",
-    "mkdirp": "^0.5.1",
-    "object-assign": "^4.1.0",
+    "mongodb": "^2.2.26",
     "react": "15.3.2",
-    "react-bootstrap": "^0.30.9",
     "react-dom": "^0.14.7",
-    "react-lazyload": "^2.2.7",
     "react-modal-dialog": "^4.0.7",
     "react-router": "^2.0.0",
-    "react-router-bootstrap": "^0.24.2",
-    "react-router-dom": "^4.1.1",
-    "react-select": "^1.0.0-rc.3"
+    "react-slick": "^0.14.11"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
