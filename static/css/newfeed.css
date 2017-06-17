@@ -1,0 +1,167 @@
+.blue-btn{
+  width: 100px;
+  color: white;
+  background-image: none;
+  background-color: #3498db;
+}
+
+.post-box{
+  padding: 10px 0px;
+  background-color: white;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  width: 50%;
+  margin: 5px 10px;
+  margin-left: 25%;
+}
+
+.profile-post-box{
+  padding: 10px 0px;
+  background-color: white;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  width: 95%;
+  margin: 10px 10px 5px;
+}
+
+.comment-box{
+  padding: 10px 25px;
+  background-color: white;
+  border: solid 1px #ddd;
+  border-radius: 3px;
+  width: 95%;
+  margin: 10px 10px 5px;
+}
+
+.post-content{
+  padding-left: 0px;
+  padding-top: 3px;
+}
+
+.content {
+  padding: 0px 25px 15px;
+}
+
+.post-owner{
+  padding: 5px 25px;
+  color: #3498db;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.post-body{
+  padding: 10px 25px 20px;
+  color: #999;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.post-body-noimage{
+  padding: 0px 25px 0px;
+  color: #999;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.post-body-modal{
+  padding: 0px 25px 12px;
+  color: #999;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.post-btn{
+  border: solid 1px darkseagreen;
+  color: green;
+}
+
+.post-owner:hover{
+  text-decoration: underline;
+}
+
+.inline-block{
+  margin-bottom: 0px;
+}
+
+.post-btn:hover{
+  text-decoration: underline;
+}
+
+.post-form{
+  width: 50%;
+  margin-bottom: 15px;
+  margin-left: 25%;
+}
+
+.post-input{
+  width: 100%;
+}
+
+.green{
+  color: green;
+}
+
+.like-box {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 3px;
+    border: solid 1px #ddd;
+    margin: 10px 17px 20px;
+}
+
+.comment-modal{
+  width: 50%;
+}
+
+.upload-btn{
+  width: 180px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+input[type="file"] {
+    display: block;
+    margin-top: -2px;
+    width: 180px;
+    z-index: -100;
+}
+
+@media only screen and (max-width : 990px) {
+  .post-box{
+    width: 80%;
+    margin-left: 10%;
+  }
+  .post-input{
+    width: 80%;
+    margin-left: 10%;
+  }
+  .comment-modal{
+    width: 80%;
+  }
+  .post-form {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  .post-box{
+    width: 90%;
+    margin-left: 5%;
+  }
+  .post-input{
+    width: 90%;
+    margin-left: 5%;
+  }
+  .comment-modal{
+    width: 80%;
+  }
+  .post-form {
+    width: 90%;
+    margin-left: 5%;
+  }
+}

@@ -1,113 +1,97 @@
 import React from 'react';
-import Slider from 'react-slick';
+import {ModalContainer, ModalDialog} from 'react-modal-dialog';
 
-import Header from './Header.js'
-import Footer from './Footer.js'
-import Sider from './Sider.js'
-import SingleProduct from './SingleProduct.js'
-
-import products from './products.js'
-
-const Carousel = (props) => (
-  <div className="row carousel-holder">
-
-      <div className="col-md-12">
-          <div id="carousel-example-generic" className="carousel slide" data-ride="carousel">
-              <ol className="carousel-indicators">
-                  <li data-target="#carousel-example-generic" data-slide-to="0" className="active"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              </ol>
-              <div className="carousel-inner">
-                  <div className="item active">
-                      <img className="slide-image" src="images/banner-web.png" alt=""/>
-                  </div>
-                  <div className="item">
-                      <img className="slide-image" src="images/banner-web.png" alt=""/>
-                  </div>
-              </div>
-              <a className="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                  <span className="glyphicon glyphicon-chevron-left"></span>
-              </a>
-              <a className="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                  <span className="glyphicon glyphicon-chevron-right"></span>
-              </a>
-          </div>
-      </div>
-
-  </div>
-);
-
-
-function ProductSlider(props) {
-    let settings = {
-      dots: false,
-      infinite: true,
-      speed: 500,
-      responsive: [
-        {
-          breakpoint: 500,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-          },
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-          },
-        },
-        {
-          breakpoint: 1600,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-          },
-        }
-      ]
-    };
-    const ProductSlider = props.products.map(product => <div key={product._id} className="col-sm-3"><SingleProduct product={product} /></div>);
-    return(
-      <div>
-        <h1 className="type-name">{props.name}</h1>
-        <Slider {...settings}>
-          {ProductSlider}
-        </Slider>
-      </div>
-    );
-};
+import LoginModal from './LoginModal.js'
+import RegisterModal from './RegisterModal.js'
+import NewFeed from './NewFeed.js'
+import Helper from './Helper.js'
+import AllActions from './AllActions.js'
 
 class Home extends React.Component {
-  constructor() {
-    super();
+
+  constructor(props) {
+    super(props);
     this.state = {
-      fullkitTops: products.filter(product => product.type == "fullkit"),
-      tankTops: products.filter(product => product.type == "fullkit"),
-      bodyTops: products.filter(product => product.type == "fullkit"),
-      juiceTops: products.filter(product => product.type == "fullkit"),
-      accessoryTops: products.filter(product => product.type == "accessory")
-    };
+      isShowingLoginModal: false,
+      isShowingRegisterModal: false,
+      username: "",
+    }
+    this.openLoginModal = this.openLoginModal.bind(this);
+    this.openRegisterModal = this.openRegisterModal.bind(this);
+    this.closeLoginModal = this.closeLoginModal.bind(this);
+    this.closeRegisterModal = this.closeRegisterModal.bind(this);
+    this.getRegisterInfo = this.getRegisterInfo.bind(this);
+  }
+
+  openLoginModal() {
+    this.setState({
+      isShowingLoginModal: true,
+      isShowingRegisterModal: false
+    })
+  }
+
+  closeLoginModal() {
+    this.setState({
+      isShowingLoginModal: false
+    })
+  }
+
+  openRegisterModal() {
+    this.setState({
+      isShowingRegisterModal: true,
+      isShowingLoginModal: false
+      })
+    }
+
+  closeRegisterModal() {
+    this.setState({
+      isShowingRegisterModal: false
+    })
+  }
+
+  getRegisterInfo(username) {
+    this.setState({
+      username: username
+    })
   }
 
   render() {
-    return (
-      <div>
-        <Header />
-        <div className="row container-home">
-          <Sider />
-          <div className="col-md-9">
-              <Carousel />
-              <ProductSlider products={this.state.fullkitTops} name="Full kit"/>
-              <ProductSlider products={this.state.tankTops} name="Đầu hút"/>
-              <ProductSlider products={this.state.bodyTops} name="Thân"/>
-              <ProductSlider products={this.state.juiceTops} name="Tinh dầu"/>
-              <ProductSlider products={this.state.accessoryTops} name="Phụ kiện"/>
-          </div>
-        </div>
-        <Footer />
-      </div>
-    )
+      return(
+              <div className="container-home row">
+                <div className="col col-md-6 home-right">
+                  <img width="150px" height="150px" src="images/Logo.png" />
+                  <img className="home-logo-name" height="40px" src="images/name-logo-2x.png"/>
+                  <h4 className="slogan">Nothing could be simpler</h4>
+                  <div className="home-button">
+                    <button className="login-register" onClick={this.openLoginModal}>Login</button>
+                    { this.state.isShowingLoginModal &&
+                      <ModalContainer onClose={this.closeLoginModal}>
+                        <ModalDialog onClose={this.closeLoginModal}>
+                          <LoginModal
+                            openRegisterModal = {this.openRegisterModal}
+                            username = {this.state.username}
+                          />
+                        </ModalDialog>
+                      </ModalContainer>
+                    }
+                    <button className="login-register" onClick={this.openRegisterModal}>Register</button>
+                    { this.state.isShowingRegisterModal &&
+                      <ModalContainer onClose={this.closeRegisterModal}>
+                        <ModalDialog onClose={this.closeRegisterModal}>
+                          <RegisterModal
+                            getRegisterInfo = {this.getRegisterInfo}
+                            openLoginModal = {this.openLoginModal}
+                          />
+                        </ModalDialog>
+                      </ModalContainer>
+                    }
+                  </div>
+                </div>
+                <div className="col col-md-6 hidden-sm-down home-left">
+                  <img width="100%" src="images/LandingImage.png" />
+                </div>
+              </div>
+            )
   }
 }
 

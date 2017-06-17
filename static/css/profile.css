@@ -1,0 +1,93 @@
+.top-important{
+  top: 100px !important;
+}
+
+.blue-border-btn{
+  width: auto;
+  padding: 5px;
+  color: #3498db;
+  background-color: white;
+  border: solid 1px #3498db;
+  border-radius: 3px;
+}
+
+div .follow-btn {
+    position: fixed;
+    right: 50px;
+    top: 32px;
+    width: 203px;
+}
+
+.pull-right{
+  clear: both;
+}
+
+.profile-info{
+  padding-left: 0px;
+  padding-top: 0px;
+}
+
+.profile-name{
+  padding: 5px 25px;
+  color: #3498db;
+  font-size: 20px;
+  margin: 0px 0px 0px 72px;
+  float: left;
+}
+
+.profile-birthday{
+  padding: 0px 25px 0px;
+  color: #999;
+  font-size: 20px;
+  margin: 0px 0px 0px 70px;
+  clear: left;
+  float: left;
+}
+
+.follow-info{
+  float: right !important;
+  clear: both;
+  margin-top: -35px;
+  margin-right: 13px;
+}
+
+.follow-box{
+  display: inline-block;
+  padding: 4px 15px;
+  background-color: white;
+  border-radius: 4px;
+  border: solid 1px #ddd;
+  margin: 10px 2px 20px;
+}
+
+.avatar{
+  position: fixed;
+  border-radius: 50%;
+  float: left;
+}
+
+.comment-form{
+  height: 200px;
+}
+
+.no-comment-form{
+  height: 100px;
+}
+
+@media only screen and (max-width : 767px) {
+  .profile-birthday{
+    color: white;
+  }
+  .follow-info {
+    margin-top: -30px;
+    margin-right: -5px;
+  }
+  div .follow-btn {
+    right: 40px;
+    top: 32px;
+    width: 150px;
+  }
+  .profile-name {
+    padding: 5px 27px;
+  }
+}
